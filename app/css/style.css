@@ -1,0 +1,40 @@
+header {
+    font-family: 'Barrio', cursive;
+    font-size: 60px;
+    color: #FF6662;
+    border-bottom: 4px solid #FFA8A6;
+}
+
+.review-add {
+    text-align: center;
+}
+
+.review-add button {
+    margin: 20px;
+}
+
+.book_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+
+.rating {
+    width: 70px;
+    height: 40px;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px solid #F8CFCE;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+
+}
