@@ -21,9 +21,13 @@ header {
 }
 
 .book {
-    width: 400px;
-    height: 400px;
     text-align: center;
+    padding: 20px;
+}
+
+.book h2 a {
+    color: #FF6662;
+
 }
 
 .rating {

@@ -23,16 +23,22 @@
 <div class="review-add">
     <button class="btn btn-default btn-lg"> Create Review </button>
 </div>
-<section class="book_list">
-    <div class="book row">
+<section class="book_list container-fluid" ng-controller="ReadingListController as readListCtrl" >
+    <div class="book col-xs-12 col-sm-6" ng-repeat="book in readListCtrl.books">
         <aside class="col-sm-3">
-            <a href="#"> <img alt="Cover of Book Title" class="full" /> </a>
-            <p class="rating"> 5/5 </p>
+            <a href="https://www.amazon.com/dp/{{ book.isbn }}"> <img src="http://images.amazon.com/images/P/{{ book.isbn }}.01.20TRZZZZ.jpg" alt="Cover of Book Title" class="full" /> </a>
+            <p class="rating"> {{ book.rating }}/5 </p>
         </aside>
         <div class="col-sm-9">
-            <h2>Book Title</h2>
-            <cite> Written by: </cite>
-            <p> Book Review </p>
+            <h2><a href="https://www.amazon.com/dp/{{ book.isbn }}"> {{ book.title }} </a> </h2>
+            <cite> Written by: {{ book.author }} </cite>
+            <p> "{{ book.review }}"</p>
+
+            <ul class="list-unstyled">
+                <li>
+                    <span class="label label-danger" ng-repeat="(genre, state) in book.genres" ng-show="state"> {{ genre }} </span>
+                </li>
+            </ul>
         </div>
     </book>
 </section>
