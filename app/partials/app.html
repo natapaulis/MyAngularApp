@@ -1,0 +1,22 @@
+<header class="container text-center">
+    <p> My Reading List </p>
+</header>
+
+<div class="review-add">
+    <button class="btn btn-default btn-lg"> Create Review </button>
+</div>
+
+<section class="book_list container-fluid" ng-controller="ReadingListController as readListCtrl" >
+    <div class="book col-xs-12 col-sm-6" ng-repeat="book in readListCtrl.books">
+
+        <book-cover></book-cover>
+
+        <div class="col-sm-9">
+            <h2><a href="https://www.amazon.com/dp/{{ book.isbn }}"> {{ book.title }} </a> </h2>
+            <cite> Written by: {{ book.author }} </cite>
+            <p> "{{ book.review }}"</p>
+
+            <book-genre></book-genre>
+        </div>
+    </div>
+</section>

@@ -7,6 +7,20 @@ angular.module('myApp', [])
 .controller("ReadingListController", function(){
     this.books = books;
     this.genres = genres;
+})
+.directive("bookGenre", function(){
+    return {
+        restrict: "E",
+        templateUrl: "partials/book-genre.html",
+        replace: true
+    };
+})
+.directive("bookCover", function(){
+    return {
+        restrict: "E",
+        templateUrl: "partials/book-cover.html",
+        replace: true
+    }
 });
 
 
