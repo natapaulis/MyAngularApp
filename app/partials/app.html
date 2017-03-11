@@ -2,8 +2,12 @@
     <p> My Reading List </p>
 </header>
 
-<div class="review-add">
-    <button class="btn btn-default btn-lg"> Create Review </button>
+<div class="review-add" ng-controller="ReadingListController as readListCtrl">
+    <button class="btn btn-default btn-lg" ng-click="reviewFormCtrl.showForm = !reviewFormCtrl.showForm"> {{ reviewFormCtrl.showForm ? "Cancel" : "Create a Review" }} </button>
+    <hr />
+    <review-form books="readListCtrl.books" genres="readListCtrl.genres" ng-show="reviewFormCtrl.showForm"> </review-form>
+    <hr />
+
 </div>
 
 <section class="book_list container-fluid" ng-controller="ReadingListController as readListCtrl" >

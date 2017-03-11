@@ -21,6 +21,21 @@ angular.module('myApp', [])
         templateUrl: "partials/book-cover.html",
         replace: true
     }
+})
+.directive("reviewForm", function(){
+    return {
+        restrict: "E",
+        templateUrl: "partials/review-form.html",
+        replace: true,
+        controller: function(){
+            this.book = {genres:{}};
+        },
+        controllerAs: "reviewFormCtrl",
+        scope: {
+            books: "=",
+            genres: "="
+        }
+    }
 });
 
 

@@ -25,7 +25,7 @@ header {
     padding: 20px;
 }
 
-.book h2 a {
+.book h2 a, .preview_title a {
     color: #FF6662;
 
 }
