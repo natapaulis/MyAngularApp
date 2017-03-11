@@ -12,7 +12,9 @@ angular.module('myApp', [])
     return {
         restrict: "E",
         templateUrl: "partials/book-genre.html",
-        replace: true
+        scope: {
+            genres: "="
+        }
     };
 })
 .directive("bookCover", function(){
@@ -29,6 +31,11 @@ angular.module('myApp', [])
         replace: true,
         controller: function(){
             this.book = {genres:{}};
+            this.addReview = function(form){
+                books.push(this.book);
+                this.book = {genres:{}};
+                form.$setPristine();
+            }
         },
         controllerAs: "reviewFormCtrl",
         scope: {
