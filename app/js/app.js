@@ -21,7 +21,7 @@ angular.module('myApp', [])
     return {
         restrict: "E",
         templateUrl: "partials/book-cover.html",
-        replace: true
+        replace: "true"
     }
 })
 .directive("reviewForm", function(){
